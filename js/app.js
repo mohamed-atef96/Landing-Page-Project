@@ -3,7 +3,7 @@
  // Global Variables
  const ul = document.getElementById('navbar__list');
  const sections = document.querySelectorAll('.section');
- const anchor = document.getElementsByClassName('menu__link');
+ const anchor = document.querySelectorAll('.menu__link');
  const active   = document.getElementsByClassName('active');
  const activeSection   = document.getElementsByClassName('active-section');
  const toTop = document.querySelector('.top');
@@ -39,7 +39,9 @@ sections.forEach(section=>{creatMenu(section)})
 // init of active state
 if(window.scrollY == 0){
     sections[0].classList.add('active-section');
+    if(anchor[0]){
     anchor[0].classList.add('active');
+    }
 }
 
 //to top
@@ -73,7 +75,7 @@ function addActive(section){
     if(active[0]){
         active[0].classList.remove('active');
     }
-    document.querySelector(`[href="#${id}"]`).classList.add('active');
+    document.querySelector(`[data_link="${id}"]`).classList.add('active');
 }
 
 
@@ -106,15 +108,16 @@ function creatMenu(section){
     const title = section.getAttribute('dataNav');
 
     const li = createElement('li');
-    const a = createElement('a', {href:`#${href}`,class:'menu__link'} , title );
+    const a = createElement('a', {class:'menu__link' , data_link:href} , title );
 
     li.appendChild(a)
     ul.appendChild(li);
     observer.observe(section);
 
+    a.addEventListener('click',()=>{
+        section.scrollIntoView({behavior: "smooth", block: "center"});
+    })
 }
-
-
 
 
 // creat element function
@@ -131,3 +134,5 @@ function createElement(tag ,attribute , text){
 
    return element;
 }
+
+

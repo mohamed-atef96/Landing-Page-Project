@@ -51,7 +51,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
+    min-height: 80px;
 }
 .add-section{
     margin-left: 30px;
@@ -68,6 +68,13 @@ header{
     color: #fff;
     font-size: 20px;
     background: rgba(0,13,60);
+}
+
+@media screen and (max-width:768px) {
+    .add{
+        font-size: 15px;
+        padding: 10px 15px;
+    }
 }
 /* Typeography General*/
 h1 {
@@ -134,6 +141,7 @@ section {
     font-weight: bold;
     text-decoration: none;
     color: #000;
+    cursor: pointer;
  
 }
 
