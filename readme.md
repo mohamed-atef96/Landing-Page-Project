@@ -14,23 +14,24 @@
 ## Development
 
 - there are four main function:-
-    - createElement()
-    - creatMenu()
-    - addActive()
-    - addSection()
-1. createElement function 
-    - used to create any element in html dynamically
-    - take three param (tag ,attribute , text)
-    - tag is the tage name we want to create
-    - attributes is the attributes which element will take
-    - text the text content of element
-2. creatMenu function 
-    - used to creat links of navigation
-    - take section element as an argument to link between it and navigation link
-3. addActive function 
-    -used to add active state to the section and links while scolling
-4. addSection function
-    - used to create new section and link it to navigation
+    1. createElement()
+    2. creatMenu()
+    3. addActive()
+    4. addSection()
+    
+    1. createElement function 
+        - used to create any element in html dynamically
+        - take three param (tag ,attribute , text)
+        - tag is the tage name we want to create
+        - attributes is the attributes which element will take
+        - text the text content of element
+    2. creatMenu function 
+        - used to creat links of navigation
+        - take section element as an argument to link between it and navigation link
+    3. addActive function 
+        -used to add active state to the section and links while scolling
+    4. addSection function
+        - used to create new section and link it to navigation
 
 - intersectionObserver to detect section that is in viewport
 - scrollIntoView to link scroll to the appropriate section
