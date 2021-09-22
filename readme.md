@@ -14,10 +14,10 @@
 ## Development
 
 - there are four main function:-
-    1. createElement()
-    2. creatMenu()
-    3. addActive()
-    4. addSection()
+    - createElement()
+    - creatMenu()
+    - addActive()
+    - addSection()
     
     1. createElement function 
         - used to create any element in html dynamically
